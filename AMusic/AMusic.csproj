@@ -208,6 +208,13 @@
     <Compile Include="BotonRedondo.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Clases\Cancion.cs" />
+    <Compile Include="Clases\CancionPlaylist.cs" />
+    <Compile Include="Clases\Favorito.cs" />
+    <Compile Include="Clases\Genero.cs" />
+    <Compile Include="Clases\Playlist.cs" />
+    <Compile Include="Clases\Seguido.cs" />
+    <Compile Include="Clases\Usuario.cs" />
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>

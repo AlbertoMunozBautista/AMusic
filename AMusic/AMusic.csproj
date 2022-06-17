@@ -247,6 +247,12 @@
     <Compile Include="FrmHome.Designer.cs">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmListaCancionesGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListaCancionesGenero.Designer.cs">
+      <DependentUpon>FrmListaCancionesGenero.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListaCancionesGenero.resx">
+      <DependentUpon>FrmListaCancionesGenero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

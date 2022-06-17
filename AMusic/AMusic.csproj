@@ -218,11 +218,23 @@
     <Compile Include="Clases\Playlist.cs" />
     <Compile Include="Clases\Seguido.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="FrmGestionCanciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionCanciones.Designer.cs">
+      <DependentUpon>FrmGestionCanciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuAdmin.Designer.cs">
+      <DependentUpon>FrmMenuAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmRegistro.cs">
       <SubType>Form</SubType>
@@ -238,8 +250,14 @@
     <Compile Include="txtRedondo.Designer.cs">
       <DependentUpon>txtRedondo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmGestionCanciones.resx">
+      <DependentUpon>FrmGestionCanciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuAdmin.resx">
+      <DependentUpon>FrmMenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistro.resx">
       <DependentUpon>FrmRegistro.cs</DependentUpon>

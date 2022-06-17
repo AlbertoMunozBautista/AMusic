@@ -20,6 +20,7 @@ namespace AMusic
     public partial class FrmRegistro : Form
     {
         FrmLogin frmLogin;
+
         public FrmRegistro(FrmLogin frmLogin)
         {
             InitializeComponent();
@@ -68,9 +69,25 @@ namespace AMusic
             return usuarioRepetido;
         }
 
-        private void btnCancelar1_Click(object sender, EventArgs e)
+   
+        
+
+        public static bool validarTelefono(string telNo)
         {
-            this.Close();
+            return Regex.Match(telNo, @"^\+?(\d[\d-. ]+)?(\([\d-. ]+\))?[\d-. ]+\d$").Success;
+        }
+
+        private bool validarCorreo(string email)
+        {
+            try
+            {
+                var mail = new System.Net.Mail.MailAddress(email);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         private void btnAceptar1_Click(object sender, EventArgs e)
@@ -153,22 +170,10 @@ namespace AMusic
             }
         }
 
-        public static bool validarTelefono(string telNo)
+        private void btnCancelar1_Click(object sender, EventArgs e)
         {
-            return Regex.Match(telNo, @"^\+?(\d[\d-. ]+)?(\([\d-. ]+\))?[\d-. ]+\d$").Success;
-        }
-
-        private bool validarCorreo(string email)
-        {
-            try
-            {
-                var mail = new System.Net.Mail.MailAddress(email);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
+            this.Close();
         }
     }
 }
+

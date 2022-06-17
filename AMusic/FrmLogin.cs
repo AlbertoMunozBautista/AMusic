@@ -22,13 +22,6 @@ namespace AMusic
             cargar();
         }
 
-        private void txtRegistro_Click(object sender, EventArgs e)
-        {
-
-            FrmRegistro frmRegistro = new FrmRegistro(this);
-            frmRegistro.ShowDialog();
-
-        }
 
         IFirebaseConfig ifc = new FirebaseConfig()
         {
@@ -51,19 +44,24 @@ namespace AMusic
             }
         }
 
-        private void btnLogin1_MouseEnter(object sender, EventArgs e)
+    
+        private void salir()
         {
-            btnLogin1.UseVisualStyleBackColor = false;
-            btnLogin1.FlatAppearance.MouseOverBackColor = Color.FromArgb(100, 3, 150, 217);
+
+            DialogResult dialogResult = MessageBox.Show("¿Desea salir de la aplicación?", "ATENCIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
         }
 
-        private void btnLogin1_MouseLeave(object sender, EventArgs e)
+        private void picCerrar_Click(object sender, EventArgs e)
         {
-            btnLogin1.UseVisualStyleBackColor = true;
-            btnLogin1.FlatAppearance.MouseOverBackColor = Color.FromArgb(3, 150, 217);
+            salir();
         }
 
-        private void btnLogin1_Click(object sender, EventArgs e)
+        private void btnLogin1_Click_1(object sender, EventArgs e)
         {
             String user = txtUsuario.Texts;
             String password = txtPassword.Texts;
@@ -96,7 +94,7 @@ namespace AMusic
                     }
                     else
                     {
-
+                        
                         FrmMenuUser frmMenuUser = new FrmMenuUser(resUsuario);
                         frmMenuUser.Show();
                         this.Hide();
@@ -112,20 +110,23 @@ namespace AMusic
             }
         }
 
-        private void picCerrar_Click(object sender, EventArgs e)
+        private void btnLogin1_MouseEnter_1(object sender, EventArgs e)
         {
-            salir();
+            btnLogin1.UseVisualStyleBackColor = false;
+            btnLogin1.FlatAppearance.MouseOverBackColor = Color.FromArgb(100, 3, 150, 217);
         }
 
-        private void salir()
+        private void btnLogin1_MouseLeave_1(object sender, EventArgs e)
         {
+            btnLogin1.UseVisualStyleBackColor = true;
+            btnLogin1.FlatAppearance.MouseOverBackColor = Color.FromArgb(3, 150, 217);
+        }
 
-            DialogResult dialogResult = MessageBox.Show("¿Desea salir de la aplicación?", "ATENCIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (dialogResult == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-
+        private void txtRegistro_Click_1(object sender, EventArgs e)
+        {
+            
+            FrmRegistro frmRegistro = new FrmRegistro(this);
+            frmRegistro.ShowDialog();
         }
     }
 }

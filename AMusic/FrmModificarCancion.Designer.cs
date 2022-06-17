@@ -106,7 +106,7 @@ namespace AMusic
             this.btnAceptar1.Name = "btnAceptar1";
             this.btnAceptar1.Size = new System.Drawing.Size(160, 48);
             this.btnAceptar1.TabIndex = 20;
-            this.btnAceptar1.Text = "Añadir";
+            this.btnAceptar1.Text = "Modificar";
             this.btnAceptar1.TextColor = System.Drawing.Color.Black;
             this.btnAceptar1.UseVisualStyleBackColor = false;
             this.btnAceptar1.Click += new System.EventHandler(this.btnAceptar1_Click);

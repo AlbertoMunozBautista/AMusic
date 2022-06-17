@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FireSharp.Config;
+using FireSharp.Response;
+using FireSharp.Interfaces;
+using AMusic.Clases;
 
 namespace AMusic
 {
@@ -15,6 +19,114 @@ namespace AMusic
         public FrmLogin()
         {
             InitializeComponent();
+            cargar();
+        }
+
+        private void txtRegistro_Click(object sender, EventArgs e)
+        {
+
+            FrmRegistro frmRegistro = new FrmRegistro(this);
+            frmRegistro.ShowDialog();
+
+        }
+
+        IFirebaseConfig ifc = new FirebaseConfig()
+        {
+            AuthSecret = "eqBhoT5oymn26ukYh7HfYGFx568xn9MIK8jrzo7a",
+            BasePath = "https://amusicprueba-default-rtdb.europe-west1.firebasedatabase.app/"
+        };
+
+        IFirebaseClient cliente;
+
+        private void cargar()
+        {
+            try
+            {
+                cliente = new FireSharp.FirebaseClient(ifc);
+            }
+            catch (Exception)
+            {
+
+                throw; //no internet connection
+            }
+        }
+
+        private void btnLogin1_MouseEnter(object sender, EventArgs e)
+        {
+            btnLogin1.UseVisualStyleBackColor = false;
+            btnLogin1.FlatAppearance.MouseOverBackColor = Color.FromArgb(100, 3, 150, 217);
+        }
+
+        private void btnLogin1_MouseLeave(object sender, EventArgs e)
+        {
+            btnLogin1.UseVisualStyleBackColor = true;
+            btnLogin1.FlatAppearance.MouseOverBackColor = Color.FromArgb(3, 150, 217);
+        }
+
+        private void btnLogin1_Click(object sender, EventArgs e)
+        {
+            String user = txtUsuario.Texts;
+            String password = txtPassword.Texts;
+
+
+            if (string.IsNullOrWhiteSpace(user) || string.IsNullOrWhiteSpace(password))
+            {
+                MessageBox.Show("Rellene todos los campos!");
+            }
+            else
+            {
+                FirebaseResponse res = cliente.Get(@"Usuarios/" + user);
+                Usuario resUsuario = res.ResultAs<Usuario>();
+                Usuario curUsuario = new Usuario()
+                {
+                    nombre = user,
+                    password = password
+                };
+
+                if (Usuario.loginCorreoPassword(resUsuario, curUsuario))
+                {
+
+
+                    //dependiendo del tipo de usuarion que esa se nos abrirá un menú u otro.
+                    if (resUsuario.tipo)
+                    {
+                        FrmMenuAdmin frmMenuAdmin = new FrmMenuAdmin();
+                        frmMenuAdmin.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+
+                        FrmMenuUser frmMenuUser = new FrmMenuUser(resUsuario);
+                        frmMenuUser.Show();
+                        this.Hide();
+                    }
+
+                }
+
+                else
+                {
+                    Usuario.showError();
+                }
+
+            }
+        }
+
+        private void picCerrar_Click(object sender, EventArgs e)
+        {
+            salir();
+        }
+
+        private void salir()
+        {
+
+            DialogResult dialogResult = MessageBox.Show("¿Desea salir de la aplicación?", "ATENCIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
         }
     }
 }
+

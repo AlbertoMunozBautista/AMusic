@@ -33,6 +33,9 @@ namespace AMusic
             this.dgvCanciones = new System.Windows.Forms.DataGridView();
             this.picSalir = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAnadir1 = new AMusic.BotonRedondo();
+            this.btnEliminar1 = new AMusic.BotonRedondo();
+            this.btnModificar1 = new AMusic.BotonRedondo();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCanciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,6 +59,7 @@ namespace AMusic
             this.dgvCanciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCanciones.Size = new System.Drawing.Size(1204, 466);
             this.dgvCanciones.TabIndex = 11;
+            this.dgvCanciones.DoubleClick += new System.EventHandler(this.dgvCanciones_DoubleClick);
             // 
             // picSalir
             // 
@@ -66,6 +70,7 @@ namespace AMusic
             this.picSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSalir.TabIndex = 12;
             this.picSalir.TabStop = false;
+            this.picSalir.Click += new System.EventHandler(this.picSalir_Click);
             // 
             // pictureBox1
             // 
@@ -76,6 +81,67 @@ namespace AMusic
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // btnAnadir1
+            // 
+            this.btnAnadir1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(217)))));
+            this.btnAnadir1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(217)))));
+            this.btnAnadir1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAnadir1.BorderRadius = 40;
+            this.btnAnadir1.BorderSize = 0;
+            this.btnAnadir1.FlatAppearance.BorderSize = 0;
+            this.btnAnadir1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnadir1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnadir1.ForeColor = System.Drawing.Color.White;
+            this.btnAnadir1.Location = new System.Drawing.Point(38, 605);
+            this.btnAnadir1.Name = "btnAnadir1";
+            this.btnAnadir1.Size = new System.Drawing.Size(209, 57);
+            this.btnAnadir1.TabIndex = 11;
+            this.btnAnadir1.Text = "Añadir";
+            this.btnAnadir1.TextColor = System.Drawing.Color.White;
+            this.btnAnadir1.UseVisualStyleBackColor = false;
+            this.btnAnadir1.Click += new System.EventHandler(this.btnAnadir1_Click_1);
+            // 
+            // btnEliminar1
+            // 
+            this.btnEliminar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(217)))));
+            this.btnEliminar1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(217)))));
+            this.btnEliminar1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEliminar1.BorderRadius = 40;
+            this.btnEliminar1.BorderSize = 0;
+            this.btnEliminar1.FlatAppearance.BorderSize = 0;
+            this.btnEliminar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar1.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar1.Location = new System.Drawing.Point(506, 605);
+            this.btnEliminar1.Name = "btnEliminar1";
+            this.btnEliminar1.Size = new System.Drawing.Size(209, 57);
+            this.btnEliminar1.TabIndex = 13;
+            this.btnEliminar1.Text = "Eliminar";
+            this.btnEliminar1.TextColor = System.Drawing.Color.White;
+            this.btnEliminar1.UseVisualStyleBackColor = false;
+            this.btnEliminar1.Click += new System.EventHandler(this.btnEliminar1_Click);
+            // 
+            // btnModificar1
+            // 
+            this.btnModificar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(217)))));
+            this.btnModificar1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(217)))));
+            this.btnModificar1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnModificar1.BorderRadius = 40;
+            this.btnModificar1.BorderSize = 0;
+            this.btnModificar1.FlatAppearance.BorderSize = 0;
+            this.btnModificar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar1.ForeColor = System.Drawing.Color.White;
+            this.btnModificar1.Location = new System.Drawing.Point(977, 605);
+            this.btnModificar1.Name = "btnModificar1";
+            this.btnModificar1.Size = new System.Drawing.Size(209, 57);
+            this.btnModificar1.TabIndex = 14;
+            this.btnModificar1.Text = "Modificar";
+            this.btnModificar1.TextColor = System.Drawing.Color.White;
+            this.btnModificar1.UseVisualStyleBackColor = false;
+            this.btnModificar1.Click += new System.EventHandler(this.btnModificar1_Click);
             // 
             // FrmGestionCanciones
             // 
@@ -83,6 +149,9 @@ namespace AMusic
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1228, 697);
+            this.Controls.Add(this.btnModificar1);
+            this.Controls.Add(this.btnEliminar1);
+            this.Controls.Add(this.btnAnadir1);
             this.Controls.Add(this.picSalir);
             this.Controls.Add(this.dgvCanciones);
             this.Controls.Add(this.pictureBox1);
@@ -103,5 +172,8 @@ namespace AMusic
         private System.Windows.Forms.PictureBox picSalir;
         private System.Windows.Forms.DataGridView dgvCanciones;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private BotonRedondo btnAnadir1;
+        private BotonRedondo btnEliminar1;
+        private BotonRedondo btnModificar1;
     }
 }

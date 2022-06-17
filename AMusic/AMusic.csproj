@@ -218,6 +218,12 @@
     <Compile Include="Clases\Playlist.cs" />
     <Compile Include="Clases\Seguido.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="FrmAnadirCancion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAnadirCancion.Designer.cs">
+      <DependentUpon>FrmAnadirCancion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGestionCanciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +256,9 @@
     <Compile Include="txtRedondo.Designer.cs">
       <DependentUpon>txtRedondo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmAnadirCancion.resx">
+      <DependentUpon>FrmAnadirCancion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGestionCanciones.resx">
       <DependentUpon>FrmGestionCanciones.cs</DependentUpon>
     </EmbeddedResource>

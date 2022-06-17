@@ -432,12 +432,12 @@ namespace AMusic
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox1_Leave(object sender, EventArgs e)
         {
-            if (_TextChanged != null)
-            {
-                _TextChanged.Invoke(sender, e);
-            }
+            //this.OnLeave(e);
+            isFocused = false;
+            this.Invalidate();
+            SetPlaceHolder();
         }
 
         private void textBox1_Enter(object sender, EventArgs e)
@@ -448,12 +448,12 @@ namespace AMusic
             RemovePlaceHolder();
         }
 
-        private void textBox1_Leave(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            //this.OnLeave(e);
-            isFocused = false;
-            this.Invalidate();
-            SetPlaceHolder();
+            if (_TextChanged != null)
+            {
+                _TextChanged.Invoke(sender, e);
+            }
         }
     }
 }

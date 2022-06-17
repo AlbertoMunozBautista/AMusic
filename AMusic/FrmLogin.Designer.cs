@@ -51,6 +51,7 @@ namespace AMusic
             this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCerrar.TabIndex = 14;
             this.picCerrar.TabStop = false;
+            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
             // 
             // txtRegistro
             // 
@@ -64,6 +65,7 @@ namespace AMusic
             this.txtRegistro.Size = new System.Drawing.Size(245, 29);
             this.txtRegistro.TabIndex = 13;
             this.txtRegistro.Text = "¿no tienes cuenta?";
+            this.txtRegistro.Click += new System.EventHandler(this.txtRegistro_Click_1);
             // 
             // pictureBox2
             // 
@@ -139,6 +141,9 @@ namespace AMusic
             this.btnLogin1.Text = "Log In";
             this.btnLogin1.TextColor = System.Drawing.Color.White;
             this.btnLogin1.UseVisualStyleBackColor = false;
+            this.btnLogin1.Click += new System.EventHandler(this.btnLogin1_Click_1);
+            this.btnLogin1.MouseEnter += new System.EventHandler(this.btnLogin1_MouseEnter_1);
+            this.btnLogin1.MouseLeave += new System.EventHandler(this.btnLogin1_MouseLeave_1);
             // 
             // FrmLogin
             // 

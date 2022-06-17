@@ -144,9 +144,9 @@ namespace AMusic
                             //cerramos
                             this.Hide();
                             frmLogin.Hide();
-                            /*
+                            
                             FrmMenuUser frmMenuUser = new FrmMenuUser(usuario);
-                            frmMenuUser.Show();*/
+                            frmMenuUser.Show();
 
                         }
                         else

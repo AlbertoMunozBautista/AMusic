@@ -36,6 +36,10 @@
     <ApplicationIcon>icono.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator">
+      <HintPath>..\..\..\..\Desktop\Bunifu UI\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>..\..\..\..\Desktop\Bunifu UI\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
@@ -75,6 +79,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.3.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
@@ -248,6 +253,12 @@
     <Compile Include="FrmMenuAdmin.Designer.cs">
       <DependentUpon>FrmMenuAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMenuUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuUser.Designer.cs">
+      <DependentUpon>FrmMenuUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmModificarCancion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuAdmin.resx">
       <DependentUpon>FrmMenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuUser.resx">
+      <DependentUpon>FrmMenuUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModificarCancion.resx">
       <DependentUpon>FrmModificarCancion.cs</DependentUpon>

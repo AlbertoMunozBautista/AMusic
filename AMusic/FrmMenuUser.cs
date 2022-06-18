@@ -172,6 +172,18 @@ namespace AMusic
 
         private void picBuscar_Click(object sender, EventArgs e)
         {
+
+            if (this.MdiChildren.Length > 0)
+            {
+                for (int i = 0; i < this.MdiChildren.Length; i++)
+                {
+                    if (this.MdiChildren[i].Name == "FrmReproductorMusica")
+                    {
+                        this.MdiChildren[i].Close();
+                    }
+                }
+
+            }
             FrmBuscar frmBuscar = new FrmBuscar(this, usuarioLogueado);
             frmBuscar.MdiParent = this;
             frmBuscar.Dock = DockStyle.Fill;
@@ -180,6 +192,19 @@ namespace AMusic
 
         private void lblHome_Click(object sender, EventArgs e)
         {
+
+            if (this.MdiChildren.Length > 0)
+            {
+                for (int i = 0; i < this.MdiChildren.Length; i++)
+                {
+                    if (this.MdiChildren[i].Name == "FrmReproductorMusica")
+                    {
+                        this.MdiChildren[i].Close();
+                    }
+                }
+       
+            }
+
             FrmHome frmHome = new FrmHome(this);
             frmHome.MdiParent = this;
             frmHome.Dock = DockStyle.Fill;
@@ -194,6 +219,18 @@ namespace AMusic
 
         private void lstPlaylist_DoubleClick_1(object sender, EventArgs e)
         {
+
+            if (this.MdiChildren.Length > 0)
+            {
+                for (int i = 0; i < this.MdiChildren.Length; i++)
+                {
+                    if (this.MdiChildren[i].Name == "FrmReproductorMusica")
+                    {
+                        this.MdiChildren[i].Close();
+                    }
+                }
+
+            }
             Playlist playlist = recuperarPlaylist();
             FrmListaCancionesPlaylist frmListaCancionesPlaylist = new FrmListaCancionesPlaylist(playlist, this, usuarioLogueado);
             frmListaCancionesPlaylist.MdiParent = this;

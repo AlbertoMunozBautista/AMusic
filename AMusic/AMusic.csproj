@@ -329,6 +329,12 @@
     <Compile Include="FrmModificarCancion.Designer.cs">
       <DependentUpon>FrmModificarCancion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPantallaBienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPantallaBienvenida.Designer.cs">
+      <DependentUpon>FrmPantallaBienvenida.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -396,6 +402,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModificarCancion.resx">
       <DependentUpon>FrmModificarCancion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPantallaBienvenida.resx">
+      <DependentUpon>FrmPantallaBienvenida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistro.resx">
       <DependentUpon>FrmRegistro.cs</DependentUpon>

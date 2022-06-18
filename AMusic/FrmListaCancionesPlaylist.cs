@@ -26,6 +26,7 @@ namespace AMusic
         private int index = 0;
         private FrmMenuUser frmMenuUser;
         private bool favorito;
+        private FrmReproductorMusica reproductor;
 
         public FrmListaCancionesPlaylist(Playlist playlist, FrmMenuUser frmMenuUser, Usuario usuarioLogueado)
         {
@@ -208,10 +209,16 @@ namespace AMusic
 
         private void picReproducir_Click(object sender, EventArgs e)
         {
+            reproductor = new FrmReproductorMusica(listaCanciones, 0);
+            reproductor.MdiParent = frmMenuUser;
+            reproductor.Dock = DockStyle.Fill;
+            reproductor.Show();
+
+            /*
             FrmReproductorMusica frmReproducirMusica = new FrmReproductorMusica(listaCanciones, 0);
             frmReproducirMusica.MdiParent = frmMenuUser;
             frmReproducirMusica.Dock = DockStyle.Fill;
-            frmReproducirMusica.Show();
+            frmReproducirMusica.Show();*/
         }
 
         private void picCorazon_Click(object sender, EventArgs e)

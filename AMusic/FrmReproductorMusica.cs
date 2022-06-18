@@ -7,16 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing;
 using AMusic.Clases;
 using System.Collections;
 using System.Net;
 
 namespace AMusic
 {
+    
     public partial class FrmReproductorMusica : Form
     {
-
         int startIndex;
         bool isPlaying = true;
 
@@ -45,6 +44,11 @@ namespace AMusic
 
         ArrayList listaCanciones = new ArrayList();
 
+        public FrmReproductorMusica()
+        {
+
+        }
+
         public FrmReproductorMusica(ArrayList listaCanciones, int startIndex)
         {
             InitializeComponent();
@@ -58,7 +62,7 @@ namespace AMusic
 
         }
 
-        private void stopPlayer()
+        public void stopPlayer()
         {
             player.Ctlcontrols.stop();
         }
@@ -166,7 +170,7 @@ namespace AMusic
             }
         }
 
-        private void btnStop_Click(object sender, EventArgs e)
+        public void btnStop_Click(object sender, EventArgs e)
         {
             stopPlayer();
             isPlaying = false;

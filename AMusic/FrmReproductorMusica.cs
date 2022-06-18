@@ -18,8 +18,9 @@ namespace AMusic
     {
 
         int startIndex;
-        bool _playing = false;
+        bool isPlaying = true;
 
+        /*
         public bool isPlaying
         {
             get
@@ -40,7 +41,7 @@ namespace AMusic
                     btnPausa.Image = pause.Image;
                 }
             }
-        }
+        }*/
 
         ArrayList listaCanciones = new ArrayList();
 
@@ -63,7 +64,7 @@ namespace AMusic
         }
 
 
-        public EventHandler onAction = null;
+        //public EventHandler onAction = null;
 
 
         private void siguiente()
@@ -142,12 +143,17 @@ namespace AMusic
                 startIndex = startIndex - 1;
                 lstCanciones.SelectedIndex = startIndex;
             }
+            isPlaying = true;
+            btnPausa.Image = pause.Image;
             startPlayer(startIndex);
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
             siguiente();
+            isPlaying = true;
+            btnPausa.Image = pause.Image;
+            
         }
 
         private void timCancion_Tick(object sender, EventArgs e)
@@ -163,15 +169,33 @@ namespace AMusic
         private void btnStop_Click(object sender, EventArgs e)
         {
             stopPlayer();
+            isPlaying = false;
+            lblTiempo1.Text = "0:00";
+            btnPausa.Image = Properties.Resources.play2;
         }
 
         private void btnPausa_Click(object sender, EventArgs e)
         {
-            isPlaying = !isPlaying;
+            //isPlaying = !isPlaying;
+
+            if (isPlaying)
+            {
+                player.Ctlcontrols.pause();
+                btnPausa.Image = Properties.Resources.play2;
+                isPlaying = false;
+            } else
+            {
+                player.Ctlcontrols.play();
+                btnPausa.Image = Properties.Resources.pase;
+                isPlaying = true;
+
+            }
+
+            /*
             if (onAction != null)
             {
                 onAction.Invoke(this, e);
-            }
+            }*/
         }
 
         private void pause_Click(object sender, EventArgs e)

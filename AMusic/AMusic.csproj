@@ -37,6 +37,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\..\..\..\Desktop\Bunifu UI\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\..\Desktop\Bunifu UI\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\..\..\Desktop\Bunifu UI\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
       <HintPath>..\..\..\..\Desktop\Bunifu UI\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
     </Reference>
@@ -141,6 +150,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Management" />
     <Reference Include="System.Net" />
     <Reference Include="System.Net.Http, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Net.Http.4.3.0\lib\net46\System.Net.Http.dll</HintPath>
@@ -241,6 +251,18 @@
     <Compile Include="FrmAnadirCancion.Designer.cs">
       <DependentUpon>FrmAnadirCancion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAnadirCancionesPlaylist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAnadirCancionesPlaylist.Designer.cs">
+      <DependentUpon>FrmAnadirCancionesPlaylist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAnadirPlaylist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAnadirPlaylist.Designer.cs">
+      <DependentUpon>FrmAnadirPlaylist.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGestionCanciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +333,12 @@
     </Compile>
     <EmbeddedResource Include="FrmAnadirCancion.resx">
       <DependentUpon>FrmAnadirCancion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAnadirCancionesPlaylist.resx">
+      <DependentUpon>FrmAnadirCancionesPlaylist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAnadirPlaylist.resx">
+      <DependentUpon>FrmAnadirPlaylist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGestionCanciones.resx">
       <DependentUpon>FrmGestionCanciones.cs</DependentUpon>

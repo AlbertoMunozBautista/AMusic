@@ -64,9 +64,9 @@ namespace AMusic
             this.lstCanciones.ForeColor = System.Drawing.Color.White;
             this.lstCanciones.FormattingEnabled = true;
             this.lstCanciones.ItemHeight = 21;
-            this.lstCanciones.Location = new System.Drawing.Point(292, 126);
+            this.lstCanciones.Location = new System.Drawing.Point(292, 123);
             this.lstCanciones.Name = "lstCanciones";
-            this.lstCanciones.Size = new System.Drawing.Size(1018, 361);
+            this.lstCanciones.Size = new System.Drawing.Size(960, 424);
             this.lstCanciones.TabIndex = 4;
             this.lstCanciones.SelectedIndexChanged += new System.EventHandler(this.lstCanciones_SelectedIndexChanged);
             // 
@@ -148,7 +148,7 @@ namespace AMusic
             this.panel1.Controls.Add(this.proCancion);
             this.panel1.Location = new System.Drawing.Point(292, 482);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(765, 251);
+            this.panel1.Size = new System.Drawing.Size(972, 251);
             this.panel1.TabIndex = 23;
             // 
             // lblSonido
@@ -513,10 +513,10 @@ namespace AMusic
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1048, 666);
-            this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.player);
             this.Controls.Add(this.lstCanciones);
+            this.Controls.Add(this.bunifuGradientPanel1);
+            this.Controls.Add(this.player);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmReproductorMusica";

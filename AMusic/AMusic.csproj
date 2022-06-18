@@ -269,6 +269,12 @@
     <Compile Include="FrmBuscar.Designer.cs">
       <DependentUpon>FrmBuscar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditarUsuario.Designer.cs">
+      <DependentUpon>FrmEditarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGestionCanciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -360,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscar.resx">
       <DependentUpon>FrmBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditarUsuario.resx">
+      <DependentUpon>FrmEditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGestionCanciones.resx">
       <DependentUpon>FrmGestionCanciones.cs</DependentUpon>

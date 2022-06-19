@@ -55,6 +55,7 @@ namespace AMusic
             // 
             this.lstCancion.BackColor = System.Drawing.Color.Black;
             this.lstCancion.ForeColor = System.Drawing.Color.White;
+            this.lstCancion.FullRowSelect = true;
             this.lstCancion.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.lstCancion.HideSelection = false;
             this.lstCancion.Location = new System.Drawing.Point(85, 137);

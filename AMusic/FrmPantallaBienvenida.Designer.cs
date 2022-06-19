@@ -39,7 +39,7 @@ namespace AMusic
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AMusic.Properties.Resources.icono;
-            this.pictureBox1.Location = new System.Drawing.Point(188, 72);
+            this.pictureBox1.Location = new System.Drawing.Point(264, 29);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(300, 300);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -56,7 +56,7 @@ namespace AMusic
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(702, 476);
+            this.ClientSize = new System.Drawing.Size(858, 371);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

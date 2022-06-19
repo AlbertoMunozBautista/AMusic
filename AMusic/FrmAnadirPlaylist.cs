@@ -46,11 +46,21 @@ namespace AMusic
                 publico = false;
             }
 
-            Playlist playlist = new Playlist(idPlaylist, nombre, idUsuario, publico);
+            if (string.IsNullOrWhiteSpace(nombre))
+            {
 
-            this.Close();
-            FrmAnadirCancionesPlaylist frmAnadirCancionesPlaylist = new FrmAnadirCancionesPlaylist(playlist, frmMenuUser);
-            frmAnadirCancionesPlaylist.ShowDialog();
+                MessageBox.Show("Introduzca un nombre válido");
+
+            } else
+            {
+                Playlist playlist = new Playlist(idPlaylist, nombre, idUsuario, publico);
+
+                this.Close();
+                FrmAnadirCancionesPlaylist frmAnadirCancionesPlaylist = new FrmAnadirCancionesPlaylist(playlist, frmMenuUser);
+                frmAnadirCancionesPlaylist.ShowDialog();
+            }
+
+            
         }
     }
 }

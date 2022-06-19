@@ -84,6 +84,7 @@ namespace AMusic
             this.lstPlaylist.BackColor = System.Drawing.Color.Black;
             this.lstPlaylist.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstPlaylist.ForeColor = System.Drawing.Color.White;
+            this.lstPlaylist.FullRowSelect = true;
             this.lstPlaylist.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.lstPlaylist.HideSelection = false;
             this.lstPlaylist.Location = new System.Drawing.Point(18, 244);

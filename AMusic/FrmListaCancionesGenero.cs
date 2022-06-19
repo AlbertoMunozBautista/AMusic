@@ -23,7 +23,6 @@ namespace AMusic
     {
         private String idGenero;
         private FrmMenuUser frmMenuUser;
-        ImageList imageList = new ImageList();
         ArrayList listaIdCanciones = new ArrayList();
         ArrayList listaCanciones = new ArrayList();
         int index = 0;
@@ -53,6 +52,10 @@ namespace AMusic
             lstCancion.Columns.Clear();
             listaCanciones.Clear();
 
+            lstCancion.Columns.Add("Nombre", 150);
+            lstCancion.Columns.Add("Artista", 300);
+            lstCancion.Columns.Add("Id", 0);
+
 
             foreach (var item in data)
             {
@@ -63,34 +66,15 @@ namespace AMusic
 
                     Cancion c = new Cancion(item.Value.idCancion, item.Value.nombre, item.Value.cancion, item.Value.caratula, item.Value.genero, item.Value.artista, item.Value.fecha); ;
                     listaCanciones.Add(c);
+                    
+                    String[] row = { item.Value.nombre, item.Value.artista, item.Value.idCancion };
+                    var itemListView = new ListViewItem(row);
+                    lstCancion.Items.Add(itemListView);
 
-                    WebClient wc = new WebClient();
-                    byte[] bytes = wc.DownloadData(item.Value.caratula);
-                    MemoryStream ms = new MemoryStream(bytes);
-                    System.Drawing.Image img = System.Drawing.Image.FromStream(ms);
-                    ms.Dispose();
-
-                    this.imageList.Images.Add(img);
                 }
             }
 
-            this.imageList.ImageSize = new Size(100, 100);
-            this.lstCancion.View = View.Details;
-            lstCancion.Columns.Add("", 300);
-
-
-            lstCancion.SmallImageList = imageList;
-            int cont = 0;
-            foreach (var item in data)
-            {
-                if (item.Value.genero == idGenero)
-                {
-                    lstCancion.Items.Add(item.Value.nombre, cont);
-                    cont++;
-
-                }
-
-            }
+           
         }
 
         private void cargarComponentes()
@@ -150,6 +134,10 @@ namespace AMusic
             lstCancion.Columns.Clear();
             listaCanciones.Clear();
 
+            lstCancion.Columns.Add("Nombre", 150);
+            lstCancion.Columns.Add("Artista", 300);
+            lstCancion.Columns.Add("Id", 0);
+
             foreach (var item in data)
             {
 
@@ -160,33 +148,14 @@ namespace AMusic
                     Cancion c = new Cancion(item.Value.idCancion, item.Value.nombre, item.Value.cancion, item.Value.caratula, item.Value.genero, item.Value.artista, item.Value.fecha); ;
                     listaCanciones.Add(c);
 
-                    WebClient wc = new WebClient();
-                    byte[] bytes = wc.DownloadData(item.Value.caratula);
-                    MemoryStream ms = new MemoryStream(bytes);
-                    System.Drawing.Image img = System.Drawing.Image.FromStream(ms);
-                    ms.Dispose();
+                    String[] row = { item.Value.nombre, item.Value.artista, item.Value.idCancion };
+                    var itemListView = new ListViewItem(row);
+                    lstCancion.Items.Add(itemListView);
 
-                    this.imageList.Images.Add(img);
                 }
             }
 
-            this.imageList.ImageSize = new Size(100, 100);
-            this.lstCancion.View = View.Details;
-            lstCancion.Columns.Add("", 300);
-
-
-            lstCancion.SmallImageList = imageList;
-            int cont = 0;
-            foreach (var item in data)
-            {
-                if (item.Value.genero == idGenero && item.Value.nombre.ToLower().Contains(texto))
-                {
-                    lstCancion.Items.Add(item.Value.nombre, cont);
-                    cont++;
-
-                }
-
-            }
+           
         }
 
         private void lstCancion_DoubleClick(object sender, EventArgs e)

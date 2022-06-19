@@ -104,23 +104,33 @@ namespace AMusic
             String nombre = txtNombre.Text;
             Cancion c;
 
-            try
+            if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(artista))
             {
-                String genero = this.listaIdGenero[cmbGenero.SelectedIndex].ToString();
-                c = new Cancion(cancion.idCancion, nombre, cancion.cancion, cancion.caratula, genero, artista, cancion.fecha);
-            }
-            catch (Exception)
+                MessageBox.Show("No puede dejar espacios en blanco");
+                
+
+            } else
             {
+                try
+                {
+                    String genero = this.listaIdGenero[cmbGenero.SelectedIndex].ToString();
+                    c = new Cancion(cancion.idCancion, nombre, cancion.cancion, cancion.caratula, genero, artista, cancion.fecha);
+                }
+                catch (Exception)
+                {
 
-                c = new Cancion(cancion.idCancion, nombre, cancion.cancion, cancion.caratula, cancion.genero, artista, cancion.fecha);
+                    c = new Cancion(cancion.idCancion, nombre, cancion.cancion, cancion.caratula, cancion.genero, artista, cancion.fecha);
+                }
+
+                cliente.Update("Cancion/" + cancion.idCancion, c);
+
+                MessageBox.Show("Canción Modificada");
+
+                this.Close();
+                frmGestionCanciones.cargarDatagrid();
             }
 
-            cliente.Update("Cancion/" + cancion.idCancion, c);
-
-            MessageBox.Show("Canción Modificada");
-
-            this.Close();
-            frmGestionCanciones.cargarDatagrid();
+           
 
             //FrmGestionCanciones frmGestionCancionesNuevo = new FrmGestionCanciones();
             //frmGestionCancionesNuevo.Show();

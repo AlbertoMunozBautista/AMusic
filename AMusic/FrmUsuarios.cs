@@ -36,6 +36,7 @@ namespace AMusic
             cargar();
             cargarLista();
             cargarBoton();
+            lblNombre.Text = usuario.nombre;
             var request = WebRequest.Create(usuario.foto);
             using (var response = request.GetResponse())
             using (var stream = response.GetResponseStream())

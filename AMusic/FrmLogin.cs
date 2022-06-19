@@ -93,11 +93,10 @@ namespace AMusic
                         this.Hide();
                     }
                     else
-                    {
-                        /*
+                    {                     
                         FrmMenuUser frmMenuUser = new FrmMenuUser(resUsuario);
                         frmMenuUser.Show();
-                        this.Hide();*/
+                        this.Hide();
                     }
 
                 }

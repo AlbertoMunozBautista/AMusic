@@ -36,6 +36,31 @@
     <ApplicationIcon>icono.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\..\..\..\Desktop\Bunifu UI\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\..\Desktop\Bunifu UI\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\..\..\Desktop\Bunifu UI\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
+      <HintPath>..\..\..\..\Desktop\Bunifu UI\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\..\Desktop\Bunifu UI\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
+      <HintPath>..\..\..\..\Desktop\Bunifu UI\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator">
+      <HintPath>..\..\..\..\Desktop\Bunifu UI\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
+      <HintPath>..\..\..\..\Desktop\Bunifu UI\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>..\..\..\..\Desktop\Bunifu UI\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
@@ -75,6 +100,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.3.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
@@ -124,6 +150,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Management" />
     <Reference Include="System.Net" />
     <Reference Include="System.Net.Http, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Net.Http.4.3.0\lib\net46\System.Net.Http.dll</HintPath>
@@ -224,6 +251,30 @@
     <Compile Include="FrmAnadirCancion.Designer.cs">
       <DependentUpon>FrmAnadirCancion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAnadirCancionesPlaylist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAnadirCancionesPlaylist.Designer.cs">
+      <DependentUpon>FrmAnadirCancionesPlaylist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAnadirPlaylist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAnadirPlaylist.Designer.cs">
+      <DependentUpon>FrmAnadirPlaylist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscar.Designer.cs">
+      <DependentUpon>FrmBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditarUsuario.Designer.cs">
+      <DependentUpon>FrmEditarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGestionCanciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +286,24 @@
     </Compile>
     <Compile Include="FrmGestionUsuarios.Designer.cs">
       <DependentUpon>FrmGestionUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListaCancionesGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListaCancionesGenero.Designer.cs">
+      <DependentUpon>FrmListaCancionesGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListaCancionesPlaylist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListaCancionesPlaylist.Designer.cs">
+      <DependentUpon>FrmListaCancionesPlaylist.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -248,17 +317,41 @@
     <Compile Include="FrmMenuAdmin.Designer.cs">
       <DependentUpon>FrmMenuAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMenuUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuUser.Designer.cs">
+      <DependentUpon>FrmMenuUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmModificarCancion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmModificarCancion.Designer.cs">
       <DependentUpon>FrmModificarCancion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPantallaBienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPantallaBienvenida.Designer.cs">
+      <DependentUpon>FrmPantallaBienvenida.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmRegistro.Designer.cs">
       <DependentUpon>FrmRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReproductorMusica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReproductorMusica.Designer.cs">
+      <DependentUpon>FrmReproductorMusica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -271,11 +364,32 @@
     <EmbeddedResource Include="FrmAnadirCancion.resx">
       <DependentUpon>FrmAnadirCancion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAnadirCancionesPlaylist.resx">
+      <DependentUpon>FrmAnadirCancionesPlaylist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAnadirPlaylist.resx">
+      <DependentUpon>FrmAnadirPlaylist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscar.resx">
+      <DependentUpon>FrmBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditarUsuario.resx">
+      <DependentUpon>FrmEditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGestionCanciones.resx">
       <DependentUpon>FrmGestionCanciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGestionUsuarios.resx">
       <DependentUpon>FrmGestionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListaCancionesGenero.resx">
+      <DependentUpon>FrmListaCancionesGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListaCancionesPlaylist.resx">
+      <DependentUpon>FrmListaCancionesPlaylist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -283,11 +397,23 @@
     <EmbeddedResource Include="FrmMenuAdmin.resx">
       <DependentUpon>FrmMenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuUser.resx">
+      <DependentUpon>FrmMenuUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmModificarCancion.resx">
       <DependentUpon>FrmModificarCancion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPantallaBienvenida.resx">
+      <DependentUpon>FrmPantallaBienvenida.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistro.resx">
       <DependentUpon>FrmRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReproductorMusica.resx">
+      <DependentUpon>FrmReproductorMusica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -469,6 +595,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icono.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

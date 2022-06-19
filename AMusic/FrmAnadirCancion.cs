@@ -192,6 +192,7 @@ namespace AMusic
 
         private void btnAceptar1_Click_1(object sender, EventArgs e)
         {
+            
             Guid UUID = Guid.NewGuid();
             String idCancion = UUID.ToString();
             String nombre = txtNombre.Text.ToString();
@@ -199,13 +200,26 @@ namespace AMusic
             String artista = txtArtista.Text.ToString();
             String fecha = DateTime.Now.ToString("d");
 
-            Cancion cancion = new Cancion(idCancion, nombre, cancionStorage, caratulaStorage, genero, artista, fecha);
-            SetResponse res = cliente.Set(@"Cancion/" + idCancion, cancion);
+            if (string.IsNullOrWhiteSpace(nombre) || 
+                string.IsNullOrWhiteSpace(artista) || 
+                string.IsNullOrWhiteSpace(cancionStorage) || 
+                string.IsNullOrWhiteSpace(caratulaStorage))
+            {
 
-            MessageBox.Show("Canción añadida");
+                MessageBox.Show("No puede dejar espacios en blanco");
+                
+            }
+            else
+            {
+                Cancion cancion = new Cancion(idCancion, nombre, cancionStorage, caratulaStorage, genero, artista, fecha);
+                SetResponse res = cliente.Set(@"Cancion/" + idCancion, cancion);
 
-            this.Close();
-            frmGestionCanciones.cargarDatagrid();
+                MessageBox.Show("Canción añadida");
+
+                this.Close();
+                frmGestionCanciones.cargarDatagrid();
+            }
+
         }
 
         private void progressTime_Tick(object sender, EventArgs e)

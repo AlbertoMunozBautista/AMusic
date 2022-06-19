@@ -56,9 +56,9 @@ namespace AMusic
             this.startIndex = startIndex;
             stopPlayer();
             anadirLista(listaCanciones);
-            lstCanciones.SelectedIndex = startIndex;
-            barSonido.Value = 100;
+            lstCanciones.SelectedIndex = startIndex;        
             startPlayer(startIndex);
+            barSonido.Value = 100;
 
         }
 
@@ -235,6 +235,8 @@ namespace AMusic
         private void lstCanciones_SelectedIndexChanged(object sender, EventArgs e)
         {
             startIndex = lstCanciones.SelectedIndex;
+            btnPausa.Image = pause.Image;
+            isPlaying = true;
             startPlayer(startIndex);
         }
     }
